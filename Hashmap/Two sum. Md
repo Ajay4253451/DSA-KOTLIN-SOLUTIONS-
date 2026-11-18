@@ -1,0 +1,32 @@
+# 1. Two Sum (LeetCode - Easy)
+
+### My Approach :
+1. Is problem ko fast ($O(n)$ time) solve karne ke liye maine ek HashMap use kiya hai, jisme hum har number aur uska index store karte hain.
+2. Array par loop chalate waqt, har current number (`exactnum`) ke liye hum check karte hain ki `target - exactnum` (yaani `requiredNum`) pehle se map mein hai ya nahi.
+3. Agar `requiredNum` map mein mil jata hai, toh iska matlab humein dono numbers mil gaye hain, aur hum unke indices return kar dete hain.
+4. Agar nahi milta, toh hum current number aur uske index ko map mein add kar dete hain taaki aage aane wale numbers ke saath match kiya ja sake.
+
+
+### Kotlin Code:
+```kotlin
+import java.util.HashMap
+
+class Solution {
+    fun twoSum(nums: IntArray, target: Int): IntArray {
+        val map = HashMap<Int, Int>()
+        
+        for (i in nums.indices) {
+            val exactnum = nums[i]
+            val requiredNum = target - exactnum
+            
+            if (map.containsKey(requiredNum)) {
+                return intArrayOf(map[requiredNum]!!, i)
+            }
+            
+            map[exactnum] = i
+        }
+        
+        return intArrayOf()
+    }
+}
+```
