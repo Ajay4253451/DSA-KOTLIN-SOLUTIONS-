@@ -16,7 +16,7 @@ yahan pr me apni leetcode problem ke solutions share krta hu in hienglish me
 
 | # | Problem Name | Topic | Difficulty | Solution |
 | :--- | :--- | :--- | :--- | :--- |
-| 01 | [Two Sum](https://leetcode.com) | Arrays & Hashing | Easy | [View Code](./Hashmap/01_Two_Sum.md) |
+| 01 | [Two Sum](https://leetcode.com) | Arrays & Hashing | Easy | [View Code](./Arrays/01_Two_Sum.md) |
 
 *(More solutions coming soon...)*
 
